@@ -29,7 +29,7 @@ ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 ScrollingFrame.Size = UDim2.new(0, 250, 0, 150)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1, 70)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1, 100)
 ScrollingFrame.ScrollBarThickness = 2
 
 UIListLayout.Parent = ScrollingFrame
