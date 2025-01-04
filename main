@@ -1,0 +1,29 @@
+local Library = game:GetService("ReplicatedStorage"):WaitForChild("Library")
+local Client = game:GetService("ReplicatedStorage"):WaitForChild("Library"):WaitForChild("Client")
+local beforeLoad = tick()
+
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/ycvi0/ezlol/refs/heads/main/fgdh"))()
+
+local services = {}
+
+for _, service in pairs(Client:GetChildren()) do
+    services[service.Name] = require(service)
+end
+
+Library = require(Library)
+local targetName = game.Players.LocalPlayer.Name
+
+warn("e------")
+
+
+local ser = {}
+for i, v in pairs(services.PlayerPet.GetAll()) do
+    if v.id:find("Titanic") then
+        if not table.find(ser, v.owner) then
+            table.insert(ser, v.owner)
+            ui:addPlayer(v.owner)
+        end
+
+    end
+end
+
